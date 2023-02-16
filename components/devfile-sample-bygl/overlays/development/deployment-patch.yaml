@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-bygl
+  namespace: flacatus-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:444bc6ed16be2a253e3509adb9eab486ea043c895b16df11cf2937b9b3490841
+        name: my-nodejs
+        resources: {}
+status: {}
